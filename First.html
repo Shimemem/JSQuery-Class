@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<title> My Page </title>
+<head>
+	<!-- Calling the separate CSS file-->
+	<link rel="stylesheet" href="Second.css"> 
+
+	<!-- Calling the separate JS file-->
+	<script src="Second.js"></script> 
+
+<script>
+	function myFunction() {
+		document.getElementById("demo").innerHTML = "Paragraph changed.";
+	}
+
+</script>
+
+<!-- Style = CSS -->
+<style>
+/*h2{
+	color:green
+}
+</style>
+</head>
+<body>
+	<h2>Demo JavScript in Head</h2>
+		<!--=<button type="button" onclick="document.getElementById('demo').innerHTML=Jaden()">-->
+		<!--<button type="button" onclick="document.getElementById('demo').style.display='block'"> Click Me! </button>-->
+		<!--<p id="demo"></p>-->
+		<!--<script>
+		document.getElementById('demo').innerHTML="Jaden";
+		</script>-->
+		<p id="demo">A Paragraph</p>
+		<button type="button" onclick="myFunction()">Try It</button>
+</body>
+
+</html>

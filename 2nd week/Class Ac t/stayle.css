@@ -1,0 +1,25 @@
+h2 {box-sizing: border-box;
+	width: 1000px;
+	height: 400px;		
+	background-color: #09D75B;
+	color: black;
+	margin: auto;
+	font-size: 50px;
+	font-family: monospace;
+	text-align: center;
+	padding: 20px;
+	padding-top: 150px;
+}
+p {text-align: center;
+	font-size: 50px;
+	color: #09D75B;
+	font-family: monospace;
+	font-weight: bold;
+}
+button {box-sizing: border-box;
+	width: 100px;
+	height: 40px;
+	margin: auto;
+	color: black;
+	text-align: center;
+}

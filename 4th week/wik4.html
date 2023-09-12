@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset = utf-8 />
+	<title> Week 4 Exercises </title>
+</head>
+<body>
+	<h1> Assignments/Seatwork </h1>
+	<p> Week 4 Excercises </p>
+
+	<p id ="demo"></p>
+
+	<!-- <button onclick = "alert('hello')"> Pressed Me </button> -->
+
+	<!-- <button onclick ="myFunc()"> Pressed Me </button>
+	<script>
+		function myFunc(){
+			alert("Ako ay isang alert na kahon!");
+		}
+	</script> -->
+
+	<!-- <script>
+		let age = prompt('How old are you?', 809132312089012389);
+
+		alert(`You are ${age} years old!`); // You are 100 years old! 
+	</script> -->
+
+	<!-- <script>
+		let isBoss = confirm("Are you the Boss?");
+
+		alert ( isBoss ); // true if OK is pressed
+	</script> -->
+
+	<!-- <script>
+		let x = funkTion(4, 3);
+		document.getElementById("demo").innerHTML = x;
+
+		function funkTion(a, b){
+			return a * b;
+		}
+	</script> -->
+
+	<!-- <script>
+		let text = "The temperature is " + toCelsius(77) + " Celsius.";
+		document.getElementById("demo").innerHTML = text;
+
+		function toCelsius(fahrenheit) {
+			return (5/9) * (fahrenheit-32);
+		}
+	</script> -->
+
+	<script>
+		const time = new Date().getHours();
+		let greeting;
+		if (time < 1){
+			greeting = "Good Morning";
+		} else if (time <20) {
+			greeting = "Good Day";
+		} else {
+			greeting = "Good Evening";
+		}
+		document.getElementById("demo").innerHTML = greeting;
+	</script>
+
+</body>
+</html>

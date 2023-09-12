@@ -1,0 +1,29 @@
+<!DOCTYPE html> 
+<!-- Jaden Raphael J. Badlis -->
+<html>
+<head>
+	<title> Activity Quiz Lab </title> 
+	<h1> Jaden Raphael Badlis </h1>
+</head>
+<body>
+	<p id="sideA"> Side A is 5 </p>
+	<p id="sideB"> Side B is 6 </p>
+	<p id="sideC"> Side C is 7 </p>
+
+	<p id="answer"></p>
+
+	<script>
+		let sideA = 5;
+		let sideB = 6;
+		let sideC = 7;
+		document.getElementById("answer").innerHTML = "The Area of the triangle is " + triangleArea(sideA, sideB, sideC);
+
+		function triangleArea(sideA, sideB, sideC){
+			var s = (sideA + sideB + sideC)/2;
+
+            var area = Math.sqrt(s*((s-sideA)*(s-sideB)*(s-sideC)));
+            return area;
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Week 6 </title>
+	<h1> Creating Objects, Object Initialization, Adding Methods propagation </h1>
+</head>
+<body>
+	<script>
+		// Creating variables
+		var colors = ["Red", "Green", "Blue"];
+		var fruits = ["Apple", "Banana", "Mango", "Orange", "Papaya"];
+		var cities = ["London", "Paris", "New York", "Manila"];
+		var person = ["John", "Wick", 32];
+
+		// Printing variable values
+		// document.write(colors + "<br>");
+		// document.write(fruits + "<br>");
+		// document.write(cities + "<br>");
+		// document.write(person);
+
+		// docoument.write(fruits[0] + "<br>"); // Prints: Apple
+		// docoument.write(fruits[1] + "<br>"); // Prints: Apple
+		// docoument.write(fruits[2] + "<br>"); // Prints: Apple
+		// docoument.write(fruits[fruits.length - 1] + "<br>"); // Prints: Papaya
+
+		// document.write(colors[1] + "<br>");
+		// document.write(fruits[2] + "<br>");
+		// document.write(cities[1] + "<br>");
+		// document.write(person[1] + "<br>");
+
+		// document.write(fruits.length); // Outputs: 5
+
+		// for(var a = 0; a < fruits.length; a++) {
+		// 	document.write(fruits[a] + "<br>"); // Print array element
+		// }
+
+		// Iterates over array elements
+		// for(var fruit of fruits) {
+		// 	document.write(fruit + "<br>"); // Print array element
+		// }
+
+		// Loop through all the elements in the array
+		// for(var i in fruits) {
+		// 	document.write(fruits[i] + "<br>"); // Print array element
+		// }
+
+		// colors.push("Yellow"); // Adds elements in the array
+
+		// document.write(colors + "<br>"); // Prints: Red,Gree,Blue,Yellow
+		// document.write(colors.length); // Prints: 4
+
+		// colors.push("Pink", "Violet"); // Adds Elements at the end of the array
+		// colors.unshift("Yellow", "Grey"); // Adds Elements at the start of the array
+
+		// document.write(colors + "<br>"); // Prints: Yellow,Grey,Red,Green,Blue,Pink,Violet
+		// document.write(colors.length); // Prints: 7
+
+		// var last = colors.pop(); // Removes the last element from an array
+		// document.write(last + "<br>"); // Prints: Blue
+		// document.write(colors.length); // Prints: 2
+
+		// var first = colors.shift(); // Removes the first element from an array
+		// document.write(first + "<br>"); // Prints: Red
+		// document.write(colors.length); // Prints: 2
+
+
+		// var removed = colors.splice(0,1); //Remove the 1st element
+
+		// document.write(colors + "<br>"); //Prints: Green,Blue
+		// document.write(removed + "<br>"); // Prints: Red (one item array)
+		// document.write(removed.length + "<br>"); // Prints 1
+
+		// removed = colors.splice(1, 0, "Pink", "Yellow"); // Insert two items at position one
+		// document.write(colors + "<br>"); // Prints: Green,Pink,Yellow,Blue
+		// document.write(removed + "<br>"); // Empty Array
+		// document.write(removed.length + "<br>"); // Prints: 0
+
+		// removed = colors.splice(1, 1, "Purple", "Violet"); // Inserts two values, removes one
+		// document.write(colors + "<br>"); // Prints: Green,Purple,Violet,Yellow,Blue
+		// document.write(removed + "<br>"); // Prints: Pink (one item array)
+		// document.write(removed.length); // Prints: 1
+
+
+		// document.write(colors.join() + "<br>"); // Prints: Red,Green,Blue
+		// document.write(colors.join("") + "<br>"); // Prints: RedGreenBlue
+		// document.write(colors.join("-") + "<br>"); // Prints: Red-Green-Blue
+		// document.write(colors.join(", ") + "<br>"); // Prints: Red, Green, Blue
+
+		var pets = ["Cat", "Dog", "Parrot"];
+		var wilds = ["Tiger", "Wolf", "Zebra"];
+		var bugs = ["Ant", "Bee"];
+
+		// // Creating new array by combining pets and wilds arrays
+		// var animals = pets.concat(wilds);
+		// document.write(animals); // Prints: Cat,Dog,Parrot,Tiget,Wolf,Zebra
+
+		// // Creating new array by combining pets, wilds and bugs arrays
+		// var animals = pets.concat(wilds,bugs);
+		// document.write(animals); // Prints: Cat,Dog,Parrot,Tiget,Wolf,Zebra,Ant,Bee
+
+		// document.write(fruits.indexOf("Apple")); // Prints: 0
+		// document.write(fruits.indexOf("Banana")); // Prints: 1
+		// document.write(fruits.indexOf("Pineapple")); // Prints: -1
+
+		var arr = [1, 0, 3, 1, false, 5, 1, 4, 7]
+
+		// // Searching forwards, starting at from- index
+		// document.write(arr.indexOf(1,2)); // Prints: 3
+
+		// // Searching backwards, starting at from index
+		// document.write(arr.lastIndexOf(1,2)); // Prints: 0
+
+		// document.write(arr.includes(1)); // Prints: true
+		// document.write(arr.includes(6)); // Prints: false
+		// document.write(arr.includes(1, 2)); // Prints: true
+		// document.write(arr.includes(3, 4)); // Prints: false
+
+		// var result = arr.find(function(element) {
+		// 	return element > 4;
+		// })
+		// document.write(result); // Prints: 5
+
+		// var result = arr.findIndex(function(element) {
+		// 	return element > 6;
+		// })
+		// document.write(result); // Prints: 8
+
+		// var result = arr.filter(function(element) {
+		// 	return element > 4;
+		// })
+		// document.write(result + "<br>"); // Prints: 5,7
+		// document.write(result.length); // Prints: 2
+
+		var person = {
+			name: "Peter",
+			age: 28,
+			gender: "Male",
+			displayName: function() {
+				alert(this.name);
+			}
+		};
+
+		document.write(person.name + "<br>"); // Prints: Peter
+		document.write(person.age + "<br>"); // Prints: 28
+		document.write(person.gender); // Prints: Male
+		console.log(person);
+	</script>
+</body>
+</html>

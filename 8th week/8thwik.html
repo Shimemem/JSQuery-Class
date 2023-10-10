@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>8th Week</title>
+</head>
+<body>
+	<h1>The Document Object</h1>
+	<h2>The document.getElementsByName Method </h2>
+
+	<p>First Name: <input name="fname" type="text" value=""></p>
+	<p>Last Name: <input name="lname" type="text" value=""></p>
+
+	<p>The tag name of the first element with the name "fname" is:</p>
+
+	<p id="demo1"></p>
+
+	<script>
+		let elements = document.getElementsByName("fname");
+		document.getElementById("demo1").innerHTML = elements[0].tagName;
+	</script>
+
+	Cats:
+	<input type="checkbox" name="animal" value="Cats">
+	Dogs:
+	<input type="checkbox" name="animal" value="Dogs">
+	Birds:
+	<input type="checkbox" name="animal" value="Birds">
+	<p>Number of elements with name="animal" is:</p>
+	<p id="demo2"></p>
+
+	<script>
+		let num = document.getElementsByName("animal").length;
+		document.getElementById("demo2").innerHTML = num;
+	</script>
+
+	<p>Add a background color all elements with class="example":</p>
+	<h2 class ="example">A Heading</h2>
+	<p class ="example">A paragraph.</p>
+
+	<script>
+		const nodeList = document.querySelectorAll(".example");
+		for (let i = 0; i < nodeList.length; i++) {
+			nodeList[i].style.background = "lime";
+		}
+	</script>
+
+	<script>
+		/*running the page color*/
+		"use strict";
+
+		document.body.style.background = 'green'; // make the background green
+
+		setTimeout(() => document.body.style.background = '', 3000); // return back
+	</script>
+
+	The truth about elk.
+	<ol style="background: lime">
+		<li>An elk is smart</li>
+		
+		<li>... and cunning animal</li>
+	</ol>
+
+	<!-- <p>Search the site: <input type="text" name="search"> <input type="submit" value="Search!"></p>
+
+	<p>Search the visitors:</p>
+
+	<table id="age-table">
+		<tr>
+			<td>Your age:</td>
+
+			<td>
+				<label>
+					<input type="radio" name="age" value="young" checked> < 18
+				</label>
+				<label>
+					<input type="radio" name="age" value="mature"> 18 - 50
+				</label>
+				<label>
+					<input type="radio" name="age" value="senior"> > 50
+				</label>
+			</td>
+		</tr>
+		<tr>
+			<td>Additionally: <input type="text" name="fname"></td>
+			<td><input type="text" name="mname"></td>
+			<td><input type="text" name="lname"></td>
+		</tr>
+		<tr>
+			<td><input type="submit" value="Search!"></td>
+		</tr>
+	</table> -->
+
+	<!-- <form name="myForm" action="log.php" onsubmit="return validationForm()" method="post">
+		<tr>
+			<td>Name: <input type="text" name="name"></td>
+			<td>Address: <input type="text" name="address"></td>
+		</tr>
+
+		<tr>
+			<td>Mob: <input type="text" name="mob"></td>
+		</tr>
+
+		<tr>
+			<td>Age: <input type="text" name="age"></td>
+		</tr>
+
+		<tr>
+			<td>Email: <input type="text" name="email"></td>
+			<td>Tax Number: <input type="text" name="tax"></td>
+		</tr>
+
+		<input type="submit" value="Try Me">
+
+		<br><br><br><br>
+
+	</form> -->
+
+	<script>
+		function validationForm(){
+			let x = document.forms["myForm"]["name"].value
+
+			if (x=="") {
+				alert("Name must be filled out");
+				return false;
+			}
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+	<meta charset="utf-8">
+	<title>My First jQuery Powered Web Page</title>
+	<link rel="stylesheet" href="css/style.css">
+	<script src="jquery-3.7.1.js"></script>
+	<script>
+		$(document).ready(function(){
+			$("h1").css("color", "#09d75b");
+			$("h1").css("font-size", "121px");
+			$("h1").css("font-family", "arial-rounded-mt-bold");
+
+			$("button").click(function(){
+				$("p").text("#FreeFIFTYFIFTY");
+				$("p").css("color", "#ed34d1");
+				$("p").css("font-size", "50px");
+			});
+
+			$("#shime").css("background", "#abf9ff");
+			$("#shime").css("color", "#ff5533");
+			$("#shime").css("font-size", "21px");
+
+			$(".shime").css("color", "#cc80ff");
+			$(".shime").css("font-size", "21px");
+
+			alert("Stan Dreamcatcher");
+
+			$('input[type="text"]').css("background", "#b8fcc5")
+			$('input[type="password"]').css("background", "#c2fffd")
+
+			$("p.shime2").css("background", "#fdffc2");
+
+			$("#shime2 span").css("background", "#fdffc2");
+
+			$("ul li").css("background", "#fdffc2");
+
+			$("ul#shime2 li").css("background", "#e7c8fa");
+
+			$("ul.shime2 li").css("background", "#c8ecfa");
+
+			$('a[target="_blank"]').css("background", "#fdffc2");
+
+			$("tr:odd").css("background", "#ffb0b0");
+
+			$("tr:even").css("background", "#ffdeb0");
+
+			$("p:first").css("background", "#fcffb0");
+
+			$("p:last").css("background", "#c1ffb0");
+
+			$("form :text").css("background", "#b0d4ff");
+
+			$("form	:password").css("background", "#b8b0ff");
+
+			$("form :submit").css("background", "#dcabff");
+		});																				
+	</script>
+</head>
+<body>
+	<h1>Stan GFRIEND</h1>
+	<p>Not loaded yet.</p>
+	<button type="button">Replace Text</button>
+	<p id="shime">Tis is Paragraph</p>
+	<p class="shime">And anatha wan</p>
+	<p class="shime">And another juan</p>
+	<p><strong>Note:</strong> The value of the id attribute must be unique in an HTML document.</p>
+
+	<form>
+		<label>Name: <input type="text"></label>
+		<label>Password: <input type="password"></label>
+		<input type="submit" value="Sign In">
+	</form>
+
+	<p>This is a paragraph</p>
+	<p class="shime2">This is another paragrapgh</p>
+	<p>This is one more paragraph</p>
+	<ul>
+		<li>List item #1</li>
+		<li>List item #2</li>
+		<li>List item #3</li>
+	</ul>
+	<ul id="shime2">
+		<li>List item #1</li>
+		<li>List <span>item #2<span></li>
+		<li>List item #3</li>
+	</ul>
+	<ul class="shime2">
+		<li>List item #1</li>
+		<li>List item #2</li>
+		<li>List item #3</li>
+	</ul>
+	<p>Go to <a href="https://osu.ppy.sh/users/7083420/" target="_blank">Home Page</p>
+
+	<table border="1">
+		<thead>
+			<tr>
+				<th>No.</th>
+				<th>Name</th>
+				<th>Email</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>1</td>
+				<td>John Carter</td>
+				<td>johncarter@mail.com</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>Peter Parker</td>
+				<td>peterparker@mail.com</td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td>John Rambo</td>
+				<td>johnrambo@mail.com</td>
+			</tr>
+		</tbody>
+	</table>
+	<p>This is a paragraph</p>
+	<p>This is another paragraph</p>
+	<p>This is one more paragraph</p>
+	<form>
+		<label>Name: <input type="text"></label>
+		<label>Password: <input type="password"></label>
+		<input type="submit" value="Sign In">
+	</form>
+</body>
+</html>

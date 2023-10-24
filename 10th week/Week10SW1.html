@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Seatwork Exercise 1</title>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$("#btn1").click(function(){
+				$("#box").animate({
+					height: '+=400px',
+					width: '+=400px'
+				});
+			});
+			$("#btn2").click(function(){
+				$("#box").animate({
+					height: '100px',
+					width: '100px'
+				)};
+			});
+		});		
+	</script>
+</head>
+<body>
+	<button id="btn1">Animate height & width</button>
+	<button id="btn2">Reset</button>
+	<div id="box" style="background: #98bf21; height: 100px; width: 100px; margin: 6px;"></div>
+</body>
+</html>

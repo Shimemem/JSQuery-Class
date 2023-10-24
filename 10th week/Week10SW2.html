@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Seatwork Exercise 2</title>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$("#flip").click(function(){
+				$("#panel").slideDown(2500);
+			});
+			$("#stop").click(function(){
+				$("#panel").stop();
+			});
+		});
+	</script>
+	<style>
+		#panel, #flip {
+			padding: 10px;
+			font-size: 21px;
+			text-align: center;
+			background-color: #00732e;
+			color: white;
+			border: solid 2px #02b549;
+			border-radius: 10px;
+		}
+
+		#panel {
+			padding: 50px;
+			display: none;
+		}
+
+		#stop {
+			background-color: #4CAF50;
+			border: none;
+			color: white;
+			padding: 15px 32px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 16px;
+		}
+	</style>
+</head>
+<body>
+	<button id="stop">Stop Sliding</button>
+	<br><br>
+	<div id="flip">Click to slide down Panel</div>
+	<div id="panel">Hello World!!!<br><br><img src="doodl.png"></div>
+</body>
+</html>

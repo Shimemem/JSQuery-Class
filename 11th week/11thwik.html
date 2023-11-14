@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>jQuery Get Text Contents of the Elements</title>
+	<script src="jquery-3.7.1.js"></script>
+	<script>
+		$(document).ready(function(){
+			$(".btn-one").click(function(){
+				var str = $("p").text();
+				alert(str);
+			});
+			$(".btn-two").click(function(){
+				var str = $("p:first").text();
+				alert(str);
+			});
+			$(".btn-three").click(function(){
+				var str = $("p.extra").text();
+				alert(str);
+			});
+			$(".btn-four").click(function(){
+				var str = $("p#wee").html();
+				alert(str);
+			});
+			$(".btn-five").click(function(){
+				var str = $("#container").html();
+				alert(str);
+			});
+			$(".btn-six").click(function(){
+				$("body").html("<p>Hello World!</p>");
+			});
+			$(".btn-seven").click(function(){
+				var str = $("a").attr("href");
+				alert(str);
+			});
+			$(".btn-eight").click(function(){
+				var str = $("img#shime").attr("alt");
+				alert(str);
+			});
+			$(".btn-nine").click(function(){
+				$("img#shime").attr({
+					"class" : "frame",
+					"title" : "Meijer Birthday Gift"
+				});
+			}); 
+			// Append a div container on button click
+			$(".btn-ten").click(function(){
+				$("#container").append("CIIT.");
+			}); 
+			// Append all paragprahs on document ready
+			$("p").append(' <a href="#">read more...</a>');
+
+			$(".btn-eleven").click(function(){
+				$("#container").prepend("This is demo text.");
+			});
+			$(".btn-twelve").click(function(){
+				var newHeading = "<h1>Important Note:</h1>";
+				var newParagraph = document.createElement("p");
+				newParagraph.innerHTML = "<em>Lorem Upsum is dummy text...</em>";
+				var newImage = $('<img src="Sheeme edit.png" alt="Sheeme">');
+				$("p#aa").append(newHeading, newParagraph, newImage);
+			});
+			$(".btn-thirteen").click(function(){
+				$("#aa").before("<p>&mdash; The Beginning &mdash;</p>");
+			}); 
+		});
+	</script>
+	<style>
+		.frame{
+			border: 6px solid #000;
+		}
+	</style>
+</head>
+<body>
+	<button type="button" class="btn-one">Get All Paragraph's Text</button>
+	<button type="button" class="btn-two">Get First Paragraph's Text</button>
+	<button type="button" class="btn-three">Get Last Paragraph's Text</button>
+	<p>This is a paragraph</p>
+	<p>This is another paragraph</p>
+	<p class="extra">This is one more paragraph</p>
+	<button type="button" class="btn-four">Get Paragraph's HTML Contents</button>
+	<button type="button" class="btn-five">Get Container's HTML Contents</button><br/>
+	<div id="container">
+		<h1>Hello World!</h1>
+		<p id="wee">The quick <b>brown fox</b> jumps over the lazy dog.</p>
+	</div>
+	<button type="button" class="btn-six">Write Message</button><br/><br/>
+	<button type="button" class="btn-seven">Get Link's HREF Attribute</button>
+	<button type="button" class="btn-eight">Get Image ALT Attribute</button>
+	<button type="button" class="btn-nine">Set Attributes for Image</button>
+	<button type="button" class="btn-ten">Insert Text 1</button>
+	<button type="button" class="btn-eleven">Insert Text 2</button>
+	<button type="button" class="btn-twelve">Insert Text 3</button>
+	<button type="button" class="btn-thirteen">Insert Text 4</button>
+	<p><a href="#">Any website or file</a></p>
+	<p id="aa">
+		<img id="shime" src="MeijerBortdaeGifftttt.png" alt="Shime Lights">
+	</p>
+</body>
+</html>
